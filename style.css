@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Added box-sizing for consistent box model */
+}
+
+#suvam{
+  background-color: #212121;
+  color: aliceblue;
+  text-align: center;
+  font-size: 45px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:  rgb(124, 130, 130);
+}
+
+.img-box {
+  width: 60%;
+  height: 300px; /* Fixed height for visibility */
+  margin: auto;
+  line-height: 0;
+  background-image: url(images/background.png);
+  background-size: cover; /* Ensure the background covers the container */
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-wrap {
+  height: 100%; /* Ensure it fills the height of img-box */
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  transition: width 0.3s; /* Smooth transition for resizing */
+}
+
+.img-wrap img {
+  height: 100%;
+  width: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure image covers the container */
+}
+
+#line {
+  width: 1px;
+  height: 100%;
+  cursor: ew-resize;
+  background: #fff;
+  position: absolute;
+  left: 20px;
+  top: 0;
+  transition: left 0.3s; /* Smooth transition for the line */
+}
+
+.arrow {
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  margin-left: -20px;
+}
